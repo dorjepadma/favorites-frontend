@@ -1,0 +1,42 @@
+.App {
+  text-align: center;
+  background-color: #0074D9;
+}
+button {
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border:0.1em solid black;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:Fblack;
+    text-align:center;
+    transition: all 0.2s;
+    }
+button:hover{
+    color:#000000;
+    background-color:#FFFFFF;
+    }
+    @media all and (max-width:30em){
+button{
+    display:block;
+    margin:0.4em auto;
+    }
+  header, main {
+      padding: 10px;
+  }
+  
+  header {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      background: white;
+      border-bottom: 1px solid red;
+      border-bottom-width: thick;
+      
+  }
+
+}
