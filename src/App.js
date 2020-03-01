@@ -2,13 +2,14 @@ import React from 'react';
 import {
   BrowserRouter,
   Route,
+  Link,
   Switch,
 } from 'react-router-dom';
 import './App.css';
 import Header from './Header.js';
 import Search from './Search';
 import Favorites from './Favorites.js';
-import Login from './login';
+import Login from './Login';
 import PrivateRoute from './PrivateRoute';
 
 
@@ -34,7 +35,7 @@ export default class App extends React.Component {
             <PrivateRoute exact path="/favorites" component={Favorites} user={this.state.user} />
             <Route exact path="/login" render={(props) => <Login {...props} setUser={ this.setUser } user={this.state.user}/>} />
         </Switch>
-        
+
       </BrowserRouter>
     </div>
   );
