@@ -12,7 +12,6 @@ export default class Login extends Component {
         })
 
         this.props.setUser(user);
-
         this.props.history.push('/')
     }
 
@@ -32,7 +31,7 @@ export default class Login extends Component {
     render() {
         return (
             <div>
-                {this.props.user && <h2>Hi {this.props.user.displayName}</h2>}
+                {this.props.user && <h2>Welcome Jedi {this.props.user.display_name}</h2>}
                 <form onSubmit={ this.handleSignIn }>
                     <input onChange={(e) => this.setState({ signInEmail: e.target.value })} />
                     <input onChange={(e) => this.setState({ signInPassword: e.target.value })} />

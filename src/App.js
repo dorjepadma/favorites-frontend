@@ -32,7 +32,7 @@ export default class App extends React.Component {
       <Header />
         <Switch>
             <PrivateRoute exact path="/" component={Search} user={this.state.user} />
-            <PrivateRoute exact path="/favorites" component={Favorites} user={this.state.user} />
+            <PrivateRoute exact path="/Favorites" component={Favorites} user={this.state.user} />
             <Route exact path="/login" render={(props) => <Login {...props} setUser={ this.setUser } user={this.state.user}/>} />
         </Switch>
 
