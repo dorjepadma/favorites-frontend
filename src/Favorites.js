@@ -7,7 +7,7 @@ export default class Favorites extends Component {
         characters: []
     }
     componentDidMount = async () => {
-        const faves = await request.get('http://localhost:3000/api/me/favorites')
+        const faves = await request.get('http://localhost:3000/api/my/Favorites')
         .set('Authorization', this.props.user.token);
 
         this.setState({ characters: faves.body })

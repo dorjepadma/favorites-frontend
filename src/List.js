@@ -8,7 +8,7 @@ export default withRouter(class List extends Component {
     makeFavorite = async (char) => {
         console.log('List', this.props)
         // when the user clicks the makeFavorite button, add this character to the favorite list
-        const fave = await request.post('http://localhost:3000/api/me/favorites', {
+        const fave = await request.post('http://localhost:3000/api/my/Favorites', {
             name: char.name,
             weight: char.mass,
             eye_color: char.eye_color,

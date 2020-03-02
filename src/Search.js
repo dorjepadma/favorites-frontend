@@ -8,7 +8,7 @@ export default class Search extends Component {
     input: '',
     }
     componentDidMount = async () => {
-        const faves = await request.get('http://localhost:3000/api/my/favorites')
+        const faves = await request.get('http://localhost:3000/api/my/Favorites')
         .set('Authorization', this.props.user.token);
         this.setState({ favorites: faves.body })
     }
