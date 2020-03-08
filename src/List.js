@@ -8,14 +8,13 @@ export default withRouter(class List extends Component {
     makeFavorite = async (char) => {
         console.log('List', this.props)
         // when the user clicks the makeFavorite button, add this character to the favorite list
-        const fave = await request.post('http://localhost:3000/api/my/Favorites', {
+        const fave = await request.post('http://localhost:3000/api/my/favorites', {
             name: char.name,
-            weight: char.mass,
+            hair_color: char.hair_color,
             eye_color: char.eye_color,
         })
         .set('Authorization', this.props.user.token)
 
-        console.log('fave', fave.body)
     }
     
     renderButtonOrStar = (char) => {
@@ -23,24 +22,23 @@ export default withRouter(class List extends Component {
         const isOnFavoritesList = this.props.favorites.find(person => char.name === person.name);
         if (!isOnFavoritesList) {
           
-        return <button onClick={ (e) => this.makeFavorite(char)}>Your Favorite</button>
+        return <button onClick={ (e) => this.makeFavorite(char)}>Favorite</button>
         }
 
         return <span>❤️</span>
     }
 
     render() {
-        console.log('url', this.props)
         return (
             <div>
                 {
                   
                     this.props.characters.map(char => <div key={char.name} className="char-box">
                         <div>{char.name}</div>
-                        <div>{char.weight}</div>
-                        <div>{char.eye_color}</div>
+                        <div>hair color:{char.hair_color}</div>
+                        <div>eye color:{char.eye_color}</div>
                         {
-                            this.props.location.pathname !== '/Favorites' 
+                            this.props.location.pathname !== './favorites' 
                         
                                 && this.renderButtonOrStar(char)
                         }

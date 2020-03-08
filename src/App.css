@@ -1,30 +1,33 @@
+*{
+    box-sizing: border;
+  }
 .App {
-  text-align: center;
-  background-color: #0074D9;
+    text-align: center;
+    background-color: lightblue;
 }
+body{
+    background-color: lightblue;
+  }
 button {
-    display:inline-block;
+    display:table-column;
     padding:0.35em 1.2em;
-    border:0.1em solid black;
+    border:0.3em blue;
     margin:0 0.3em 0.3em 0;
     border-radius:0.12em;
     box-sizing: border-box;
     text-decoration:none;
     font-family:'Roboto',sans-serif;
     font-weight:300;
-    color:Fblack;
+    color: black;
     text-align:center;
     transition: all 0.2s;
+    size: 50 px;
     }
 button:hover{
     color:#000000;
     background-color:#FFFFFF;
     }
     @media all and (max-width:30em){
-button{
-    display:block;
-    margin:0.4em auto;
-    }
   header, main {
       padding: 10px;
   }
@@ -36,7 +39,20 @@ button{
       background: white;
       border-bottom: 1px solid red;
       border-bottom-width: thick;
-      
-  }
+      }
+
+  img.yoda {
+    justify-content: center;
+    widows: 10%;
+    margin: 0 auto;
+    height: 50%;
+  }    
+.input {
+    width: 60%;
+    position: relative;
+    top: 60%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    color: white;}
 
 }

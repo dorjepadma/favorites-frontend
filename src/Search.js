@@ -8,7 +8,7 @@ export default class Search extends Component {
     input: '',
     }
     componentDidMount = async () => {
-        const faves = await request.get('http://localhost:3000/api/my/Favorites')
+        const faves = await request.get('http://localhost:3000/api/my/favorites')
         .set('Authorization', this.props.user.token);
         this.setState({ favorites: faves.body })
     }
@@ -40,7 +40,7 @@ export default class Search extends Component {
                 {
                     // if loading, show loading, else, show list
                     this.state.loading 
-                    ? "loading!!"
+                    ? "Be patient padawan"
                     : <List 
                     characters={this.state.characters} 
                     favorites={this.state.favorites}
